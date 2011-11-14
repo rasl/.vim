@@ -10,7 +10,12 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+
 Bundle 'scrooloose/nerdtree'
+"silent! nmap <silent> <Leader>p :NERDTreeToggle<CR> "
+"nnoremap <silent> <C-f> :call FindInNERDTree()<CR>  "
+nmap <Leader>p :NERDTreeToggle<CR>
+
 Bundle 'scrooloose/nerdcommenter'
 
 " My Bundles here:
