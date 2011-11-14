@@ -18,6 +18,13 @@ nmap <Leader>p :NERDTreeToggle<CR>
 
 Bundle 'scrooloose/nerdcommenter'
 
+Bundle 'slack/vim-bufexplorer'
+"  '\be' (normal open)  or
+"  "  '\bs' (force horizontal split open)  or
+"  "  '\bv' (force vertical split open)
+"
+
+
 " My Bundles here:
 "
 " original repos on github
