@@ -30,8 +30,8 @@ Bundle 'slack/vim-bufexplorer'
 " DBGp (xdebug)
 " for run http://example.com/index.php?XDEBUG_SESSION_START=1
 Bundle 'DBGp-Remote-Debugger-Interface'
-let g:debuggerPort = 9002
-let g:debuggerTimeout = 12
+let g:debuggerPort = 9000
+let g:debuggerTimeout = 10
 
 " My Bundles here:
 "
