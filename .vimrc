@@ -11,19 +11,27 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+" NERDTree
 Bundle 'scrooloose/nerdtree'
 "silent! nmap <silent> <Leader>p :NERDTreeToggle<CR> "
 "nnoremap <silent> <C-f> :call FindInNERDTree()<CR>  "
 nmap <Leader>p :NERDTreeToggle<CR>
 
+" NERDCommenter
 Bundle 'scrooloose/nerdcommenter'
 
+" bufexplorer
 Bundle 'slack/vim-bufexplorer'
 "  '\be' (normal open)  or
 "  "  '\bs' (force horizontal split open)  or
 "  "  '\bv' (force vertical split open)
 "
 
+" DBGp (xdebug)
+" for run http://example.com/index.php?XDEBUG_SESSION_START=1
+Bundle 'DBGp-Remote-Debugger-Interface'
+let g:debuggerPort = 9002
+let g:debuggerTimeout = 12
 
 " My Bundles here:
 "
