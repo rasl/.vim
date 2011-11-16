@@ -1,5 +1,6 @@
 
 set number 
+set mouse=a
 
 set nocompatible               " be iMproved
 filetype off                   " required!
