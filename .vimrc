@@ -1,9 +1,15 @@
-
 set number 
 set mouse=a
 
-set nocompatible               " be iMproved
+set nocompatible               " iMproved
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set smarttab 
+
+set expandtab "(выключена) — в режиме вставки заменяет символ табуляции на соответствующее количество пробелов. Так же влияет на отступы, добавляемые командами >> и <<.
 "set noai
+
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -52,6 +58,16 @@ nmap <Leader><Leader>t2 :colorscheme autumn2<CR>
 nmap <Leader><Leader>t1 :colorscheme default<CR>
 " set default
 colorscheme default
+
+""""""""""""""""""""""""""""
+"	highlight space, tab and etc 
+""""""""""""""""""""""""""""
+"set encoding=utf8
+"set listchars=tab:▸·,eol:¬,precedes:«,extends:»,trail:·
+"set listchars=tab:>-,eol:<,trail:%
+"nmap <Leader><Leader>l :set list!<CR>
+
+
 
 """"""""""""""""""""""""""""
 "	php 
