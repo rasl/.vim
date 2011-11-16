@@ -33,6 +33,12 @@ Bundle 'DBGp-Remote-Debugger-Interface'
 let g:debuggerPort = 9000
 let g:debuggerTimeout = 10
 
+" PDV--phpDocumentor-for-Vim (phpDocumentator)
+Bundle 'PDV--phpDocumentor-for-Vim'
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR> 
+
 " My Bundles here:
 "
 " original repos on github
