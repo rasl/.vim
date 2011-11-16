@@ -3,15 +3,20 @@ set number
 set mouse=a
 
 set nocompatible               " be iMproved
-filetype off                   " required!
+"set noai
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+""""""""""""""""""""""""""""
 " let Vundle manage Vundle
 " required! 
+""""""""""""""""""""""""""""
 Bundle 'gmarik/vundle'
 
+""""""""""""""""""""""""""""
+"	interface 
+""""""""""""""""""""""""""""
 " NERDTree
 Bundle 'scrooloose/nerdtree'
 "silent! nmap <silent> <Leader>p :NERDTreeToggle<CR> "
@@ -24,9 +29,35 @@ Bundle 'scrooloose/nerdcommenter'
 " bufexplorer
 Bundle 'slack/vim-bufexplorer'
 "  '\be' (normal open)  or
-"  "  '\bs' (force horizontal split open)  or
-"  "  '\bv' (force vertical split open)
+"  '\bs' (force horizontal split open)  or
+"  '\bv' (force vertical split open)
 "
+
+""""""""""""""""""""""""""""
+"	color schemes (themes) 
+""""""""""""""""""""""""""""
+set t_Co=256
+Bundle 'Color-Sampler-Pack'
+" default darck transparent theme
+" \\t4 - only dark
+" \\t3 - only dark
+" \\t2 - only white
+" \\t1 - default
+nmap <Leader><Leader>t4 :colorscheme railscasts<CR>
+" dark 
+nmap <Leader><Leader>t3 :colorscheme wombat256<CR>
+" white
+nmap <Leader><Leader>t2 :colorscheme autumn2<CR>
+" default
+nmap <Leader><Leader>t1 :colorscheme default<CR>
+" set default
+colorscheme default
+
+""""""""""""""""""""""""""""
+"	php 
+""""""""""""""""""""""""""""
+" PHP syntax file
+Bundle 'php.vim'
 
 " DBGp (xdebug)
 " for run http://example.com/index.php?XDEBUG_SESSION_START=1
@@ -39,6 +70,12 @@ Bundle 'PDV--phpDocumentor-for-Vim'
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR> 
+
+""""""""""""""""""""""""""""
+"	syntax 
+""""""""""""""""""""""""""""
+filetype on                   " required!
+filetype plugin indent on     " required! 
 
 " My Bundles here:
 "
@@ -54,7 +91,6 @@ vnoremap <C-P> :call PhpDocRange()<CR>
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
 
-filetype plugin indent on     " required! 
 "
 " Brief help
 " :BundleList          - list configured bundles
