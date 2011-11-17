@@ -28,7 +28,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 "silent! nmap <silent> <Leader>p :NERDTreeToggle<CR> "
 "nnoremap <silent> <C-f> :call FindInNERDTree()<CR>  "
-nmap <Leader><Leader>p :NERDTreeToggle<CR>
+nmap <silent><Leader><Leader>p :NERDTreeToggle<CR>
 
 " NERDCommenter
 Bundle 'scrooloose/nerdcommenter'
@@ -39,7 +39,11 @@ Bundle 'slack/vim-bufexplorer'
 "  '\bs' (force horizontal split open)  or
 "  '\bv' (force vertical split open)
 "
+
+" project explorer (save, open project and etc)
 Bundle 'project.tar.gz'
+nmap <silent><Leader><Leader>l <Plug>ToggleProject
+
 
 """"""""""""""""""""""""""""
 "	color schemes (themes) 
@@ -51,13 +55,13 @@ Bundle 'Color-Sampler-Pack'
 " \\t3 - only dark
 " \\t2 - only white
 " \\t1 - default
-nmap <Leader><Leader>t4 :colorscheme railscasts<CR>
+nmap <silent><Leader><Leader>t4 :colorscheme railscasts<CR>
 " dark 
-nmap <Leader><Leader>t3 :colorscheme wombat256<CR>
+nmap <silent><Leader><Leader>t3 :colorscheme wombat256<CR>
 " white
-nmap <Leader><Leader>t2 :colorscheme autumn2<CR>
+nmap <silent><Leader><Leader>t2 :colorscheme autumn2<CR>
 " default
-nmap <Leader><Leader>t1 :colorscheme default<CR>
+nmap <silent><Leader><Leader>t1 :colorscheme default<CR>
 " set default
 colorscheme default
 
@@ -122,7 +126,7 @@ vnoremap <C-P> :call PhpDocRange()<CR>
 " check syntax php, js, ruby
 " need php-cli
 Bundle 'tomtom/checksyntax_vim'
-nmap <Leader><Leader>c :CheckSyntax<CR>
+nmap <silent><Leader><Leader>c :CheckSyntax<CR>
 
 " php indenting (with html code)
 Bundle 'PHP-correct-Indenting'
@@ -132,15 +136,19 @@ Bundle 'PHP-correct-Indenting'
 """"""""""""""""""""""""""""
 " need ctags
 Bundle 'taglist.vim'
-nmap <Leader><Leader>o :TlistToggle<CR>
+nmap <silent><Leader><Leader>o :TlistToggle<CR>
 
 " powerfull tool for search definition in all files
 Bundle 'Source-Explorer-srcexpl.vim'
 let g:SrcExpl_isUpdateTags = 0
 let g:SrcExpl_updateTagsKey = "<Leader><Leader>u" 
-nmap <Leader><Leader>i :SrcExplToggle<CR>
+nmap <silent><Leader><Leader>i :SrcExplToggle<CR>
 
-Bundle 'indexer.tar.gz'
+" indexer (auto index tags (ctags) for current project (use plugin project))
+" very slow plugin ?????
+"Bundle 'indexer.tar.gz'
+"let g:indexer_disableCtagsWarning=1
+"let g:indexer_enableWhenProjectDirFound=0
 
 
 """"""""""""""""""""""""""""
