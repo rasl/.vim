@@ -7,7 +7,7 @@ set softtabstop=4
 set shiftwidth=4 
 set smarttab 
 
-set expandtab "(выключена) — в режиме вставки заменяет символ табуляции на соответствующее количество пробелов. Так же влияет на отступы, добавляемые командами >> и <<.
+set expandtab
 "set noai
 
 
@@ -66,7 +66,7 @@ nmap <silent><Leader><Leader>t1 :colorscheme default<CR>
 colorscheme default
 
 """"""""""""""""""""""""""""
-"	highlight, aligning etc
+"	highlight, aligning, complete and etc
 """"""""""""""""""""""""""""
 " highlight tabs
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -96,6 +96,8 @@ function! s:align()
   endif
 endfunction
 
+" supertab (auto complete)
+Bundle 'ervandew/supertab'
 
 "set encoding=utf8
 "set listchars=tab:▸·,eol:¬,precedes:«,extends:»,trail:·
@@ -131,6 +133,11 @@ nmap <silent><Leader><Leader>c :CheckSyntax<CR>
 " php indenting (with html code)
 Bundle 'PHP-correct-Indenting'
 
+" complete
+Bundle 'phpcomplete.vim'
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+" reformatting =
+
 """"""""""""""""""""""""""""
 "	tags 
 """"""""""""""""""""""""""""
@@ -149,7 +156,12 @@ nmap <silent><Leader><Leader>i :SrcExplToggle<CR>
 "Bundle 'indexer.tar.gz'
 "let g:indexer_disableCtagsWarning=1
 "let g:indexer_enableWhenProjectDirFound=0
-
+"Bundle 'now/vim-man'
+"Bundle 'browser.vim'
+" need lynx (for browse documentation)
+"Bundle 'browser.vim--Brown'
+"Bundle 'Php-Doc--Jeffery'
+"Bundle 'Lynx-Offline-Documentation-Browser'
 
 """"""""""""""""""""""""""""
 "	syntax 
