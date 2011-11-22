@@ -50,20 +50,18 @@ nmap <silent><Leader><Leader>l <Plug>ToggleProject
 """"""""""""""""""""""""""""
 set t_Co=256
 Bundle 'Color-Sampler-Pack'
-" default darck transparent theme
-" \\t4 - only dark
-" \\t3 - only dark
-" \\t2 - only white
-" \\t1 - default
-nmap <silent><Leader><Leader>t4 :colorscheme railscasts<CR>
+" dark
+nmap <silent><Leader><Leader>t5 :colorscheme railscasts<CR>
 " dark 
-nmap <silent><Leader><Leader>t3 :colorscheme wombat256<CR>
+nmap <silent><Leader><Leader>t4 :colorscheme wombat256<CR>
 " white
-nmap <silent><Leader><Leader>t2 :colorscheme autumn2<CR>
-" default
-nmap <silent><Leader><Leader>t1 :colorscheme default<CR>
+nmap <silent><Leader><Leader>t3 :colorscheme autumn2<CR>
+" transparent no contrast
+nmap <silent><Leader><Leader>t2 :colorscheme neon<CR>
+" transparent contrast
+nmap <silent><Leader><Leader>t1 :colorscheme peachpuff<CR>
 " set default
-colorscheme default
+colorscheme peachpuff
 
 """"""""""""""""""""""""""""
 "	highlight, aligning, complete and etc
