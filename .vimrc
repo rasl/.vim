@@ -56,12 +56,12 @@ nmap <silent><Leader><Leader>t5 :colorscheme railscasts<CR>
 nmap <silent><Leader><Leader>t4 :colorscheme wombat256<CR>
 " white
 nmap <silent><Leader><Leader>t3 :colorscheme autumn2<CR>
-" transparent no contrast
-nmap <silent><Leader><Leader>t2 :colorscheme neon<CR>
 " transparent contrast
-nmap <silent><Leader><Leader>t1 :colorscheme peachpuff<CR>
+nmap <silent><Leader><Leader>t2 :colorscheme peachpuff<CR>
+" transparent no contrast
+nmap <silent><Leader><Leader>t1 :colorscheme neon<CR>
 " set default
-colorscheme peachpuff
+colorscheme neon
 
 """"""""""""""""""""""""""""
 "	highlight, aligning, complete and etc
