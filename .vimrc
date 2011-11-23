@@ -97,6 +97,9 @@ endfunction
 " supertab (auto complete)
 Bundle 'ervandew/supertab'
 
+" surround Delete/change/add parentheses/quotes/XML-tags/much more with ease 
+Bundle 'tpope/vim-surround'
+
 "set encoding=utf8
 "set listchars=tab:▸·,eol:¬,precedes:«,extends:»,trail:·
 "set listchars=tab:>-,eol:<,trail:%
