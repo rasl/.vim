@@ -111,7 +111,10 @@ Bundle 'tpope/vim-surround'
 "	php 
 """"""""""""""""""""""""""""
 " PHP syntax file
-Bundle 'php.vim'
+" PHP 5.1.4 http://www.vim.org/scripts/script.php?script_id=1571
+Bundle 'php.vim--Hodge'
+" PHP > 5.3 http://www.vim.org/scripts/script.php?script_id=2874
+Bundle 'StanAngeloff/php.vim'
 
 " DBGp (xdebug)
 " for run http://example.com/index.php?XDEBUG_SESSION_START=1
