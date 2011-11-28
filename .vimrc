@@ -100,12 +100,23 @@ Bundle 'ervandew/supertab'
 " surround Delete/change/add parentheses/quotes/XML-tags/much more with ease 
 Bundle 'tpope/vim-surround'
 
+" ZenCoding
+Bundle 'mattn/zencoding-vim'
+
+" snipMate
+Bundle 'msanders/snipmate.vim'
+
 "set encoding=utf8
 "set listchars=tab:▸·,eol:¬,precedes:«,extends:»,trail:·
 "set listchars=tab:>-,eol:<,trail:%
 "nmap <Leader><Leader>l :set list!<CR>
 
 
+""""""""""""""""""""""""""""
+"	html 
+""""""""""""""""""""""""""""
+" w3cvalidator
+Bundle 'dekomote/w3cvalidate.vim'
 
 """"""""""""""""""""""""""""
 "	php 
