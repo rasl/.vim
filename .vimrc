@@ -10,6 +10,8 @@ set smarttab
 set expandtab
 "set noai
 
+" понимать русские буквы во всех режимах (кроме command-line)
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
