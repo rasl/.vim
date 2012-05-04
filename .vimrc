@@ -1,5 +1,50 @@
-set number 
-set mouse=a
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" description: vim + bundle + .vimrc 
+"" author: Rassolov Dmitriy
+"" http://github.com/rasl/vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Подключение и запуск vundle
+" нужен git
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Все мое протраснство пользовательских функций начинается с <Leader><Leader> 
+" по умолчанию <Leader> равен нажатию \
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    let mapleader="\\" " пусть так и остается
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Настройки интерфейса через нативные возможности
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" номера строк
+    set nonumber " не показывать номера строк 
+    " включение/выключение нумерации строк 
+    function! ToggleNumber()
+          if &number
+            set nonumber
+          else
+            set number
+          endif
+        endfunction
+    " key ==  <leader><leader>n
+    nnoremap <silent> <leader><leader>n :call ToggleNumber()<CR>
+
+    
+" мышь
+    set mouse=a " пытаться поддерживать мышь
+
+
 
 set nocompatible               " iMproved
 set tabstop=4 
@@ -13,15 +58,6 @@ set expandtab
 " понимать русские буквы во всех режимах (кроме command-line)
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-""""""""""""""""""""""""""""
-" let Vundle manage Vundle
-" required! 
-""""""""""""""""""""""""""""
-" need git :)
-Bundle 'gmarik/vundle'
 
 """"""""""""""""""""""""""""
 "	interface 
@@ -185,6 +221,29 @@ nmap <silent><Leader><Leader>i :SrcExplToggle<CR>
 """"""""""""""""""""""""""""
 filetype on                   " required system plugins (hightlight for many system files)
 filetype plugin indent on     " required special plugins
+
+" Disable <Arrow keys>
+        inoremap <Up> <NOP>
+        inoremap <Down> <NOP>
+        inoremap <Left> <NOP>
+        inoremap <Right> <NOP>
+        noremap <Up> <NOP>
+        noremap <Down> <NOP>
+        noremap <Left> <NOP>
+        noremap <Right> <NOP>
+" Позволяем передвигаться с помощью hjkl в Insert mode зажав <Ctrl>
+        imap <C-h> <C-o>h
+        imap <C-j> <C-o>j
+        imap <C-k> <C-o>k
+        imap <C-l> <C-o>l
+
+" Переключение по сплитам
+        nmap <C-h> <C-W>h
+        nmap <C-j> <C-W>j
+        nmap <C-k> <C-W>k
+        nmap <C-l> <C-W>l
+" ack
+"Bundle 'mileszs/ack.vim'
 
 " My Bundles here:
 "
