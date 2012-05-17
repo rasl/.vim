@@ -1,7 +1,7 @@
 #!/bin/sh
 git submodule init
 git submodule update
-if [ "$PWD" -eq "$HOME/.vim" ]
+if [ "$PWD" = "$HOME/.vim" ]
 then
 	ln -s $PWD/.vimrc $HOME/.vimrc
 	ln -s $PWD/.vimrc $HOME/.gvimrc
