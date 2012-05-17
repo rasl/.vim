@@ -4,9 +4,9 @@
 "" http://github.com/rasl/vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"
-" TODO: сделать краткий список шорткатов (гератор такого списка???)
-"
+"""
+""" TODO: сделать краткий список шорткатов (гератор такого списка???)
+"""
 
 set nocompatible " без обратной совместимоси с vi
 
@@ -399,6 +399,41 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 	noremap <silent><leader><Leader>m :call ToggleGUINoise()<cr>
 
 
+
+" Создание markdown из комментариев сомого конфига .vimrc
+function! MakeMarkDownFromComment()
+	let mapleader = g:mapleader
+	let shortkeys=[]
+	let file = readfile($MYVIMRC)
+	for line in file
+		if !empty(matchstr(line, "\"\\{3}\\s:shortcut:.*"))
+			let shortkey = substitute(line, "\"\\{3}\\s:shortcut:\\s\\(.*\\)", "\\1", "g")
+			let shortkey = substitute(shortkey, "<leader>", mapleader, "g")
+			call add(shortkeys, shortkey)
+		endif
+	endfor
+	let outfile=[]
+	let file = readfile($MYVIMRC)
+	for line in file
+		let line = matchstr(line, "\"\\{3}.*")
+		let line = substitute(line, "\"\\{3}", "", "g")
+		if !empty(matchstr(line, ":shortcut:.*"))
+			let line=''
+		endif
+		if !empty(matchstr(line, ":shortcutList:.*"))
+			let line=''
+			for shortkey in shortkeys
+				call add(outfile, shortkey)
+			endfor
+		endif
+		if !empty(line)
+			call add(outfile, line)
+		endif
+	endfor
+	call writefile(outfile, $HOME.'/.vim/readme.mk')
+endfunction
+
+noremap <silent><leader><leader>d : call MakeMarkDownFromComment()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Настройки плагинов общего назначения
