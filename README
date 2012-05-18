@@ -1,7 +1,0 @@
-vim config and plugins
-
-Installation (for lazy)
-Run:
-	$ . install.sh
-or :
-	$ chmod u+x install.sh && ./install.sh

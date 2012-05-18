@@ -1,0 +1,272 @@
+## Ещё одна конфигурация vim
+
+* [ Краткое описание ](#intro)
+* [ Установка ](#install)
+* [ Список горячих клавиш ](#shortcuts)
+* [ Ёще описание ](#desc)
+* [ Плагины ](#plugins)
+* [ Шпаргалка ](#shortList)
+
+### Краткое описание <a id="intro" />
+
+В репозитории нет самих плагинов, они подключаются через [ vudle ](https://github.com/gmarik/vundle)
+Для работы необходим git.
+Все горячие клавиши начинаются с двойного нажания <code>leader</code>.
+Эти настройки использую под debian и cygwin, т.е. в linux-like должно работать.
+
+### Установка <a id="install" />
+
+<code>
+$ git clone https://rasl@github.com/rasl/.vim.git ~/.vim
+$ cd ~/.vim
+$ . install.sh
+</code>
+
+Установит vundle и через него поддтянет плагины, сделает symlink'и.
+Если устанавливать не в ~/.vim, сделает копию предыдущих настроек
+(~/.vim.backup ~/.vimrc.backup)
+
+### Список горячих клавиш <a id="shortcuts" />
+ <code>\\\\n</code> - вкл/выкл нумерацию строк (3 режима)
+ <code>\\\\e</code> - конвертация табов в пробелы и обратно
+ <code>\\\\w</code> - вкл/выкл перенос строк
+ <code>\\\\l</code> - показывать/не показывать непечатаемые символы (пробебы, табы и т.д.)
+ <code>\\\\s</code> - вкл/выкл проверку правописания
+ <code>\\\\se</code> - вкл/выкл проверку английского
+ <code>\\\\sr</code> - вкл/выкл проверку русского
+ <code>\\\\sre</code> - вкл/выкл проверку правописания сразу 2х
+ <code>\\\\sre</code> - вкл/выкл проверку правописания сразу 2х
+ <code>\\\\v</code> - открыть конфиг .vimrc в новом tab
+ <code>\\\\vv</code> - применить изменения конфига .vimrc
+ <code>\\\\vd</code> - сгенерировать readme.mk из комментариев в .vimrc
+ <code>\\<esc></code> - убрать подсветку поиска
+ <code>\\\\r</code> - поиск и замена во всех открытых буферах
+ <code>\\\\m</code> - вкл/выкл меню в gvim
+ <code>\\\\t5</code> - применить цветовую схему railscasts (темная)
+ <code>\\\\t5</code> - применить цветовую схему wombat256 (темная)
+ <code>\\\\t5</code> - применить цветовую схему autumn2 (светлая)
+ <code>\\\\t5</code> - применить цветовую схему peachpuff (контрастрая)
+ <code>\\\\t5</code> - применить цветовую схему neon (не контрастная)
+ <code>\\\\g</code> - gundo (древовидный вид истории изменений)
+ <code>\\\\t</code> - tabular : Tabularize /
+ <code>\\\\tt</code> - tabular : Tabularize /\zs
+ <code>\\\\b</code> - bufexporer (менеджер буферов)
+ <code>\\\\p</code> - project (менеджер проектов)
+ <code>\\\\t</code> - taglist (менеджер тегов)
+ <code>\\\\c</code> - checksyntax php (вызов php-cli для проверки php синтаксиса)
+ <code>\\\\cc</code> - phpcodesniffer (проверка стиля кодирования)
+ <code>\\\\css</code> - CSScomb (сортировка css свойств)
+
+
+
+### Ёще описание <a id="desc" />
+
+Можно передвигаться с помощью hjkl в Insert mode зажав Ctrl
+
+Стрелки и pgUp pgDown отключены
+
+
+### Плагины <a id="plugins" />
+
+#### Bundle 'Color-Sampler-Pack'
+Цветовые схемы
+пакет стандартных цветовых схем
+для работы нужны 256 цветов
+set t_Co=256
+
+#### Bundle 'sjl/gundo.vim'
+Древовидный вид истории изменений
+(очень крутая штука, требует python и версию не ниже 7.3)
+
+#### Bundle "godlygeek/tabular"
+Автоматическое выравнивание
+настройка tabular
+позволяет автоматически растовлять пробелы и табы
+insert space, example:
+one	= 1
+two	= 2
+three = 3
+four	= 4
+
+#### Bundle 'scrooloose/nerdcommenter'
+Умное комментирование
+http://www.vim.org/scripts/script.php?script_id=1218
+все комбинации по умолчанию
+
+#### Bundle 'slack/vim-bufexplorer'
+Менеджер буферов
+стандартые вызовы
+'\be' (normal open)
+'\bs' (force horizontal split open)
+'\bv' (force vertical split open)
++ мои по аналогии со всеми настройками через 2 Leader
+
+#### Bundle 'mattn/zencoding-vim'
+ZenCoding
+Быстрый набор html
+
+#### Bundle 'tpope/vim-surround'
+Плагин позволяет "всё" обрамлять в кавычки, теги и т.д.
+
+#### Bundle 'DeleteTrailingWhitespace'
+Удаление пробелов в конце строк всегда для всех файлов
+
+#### Bundle 'project.tar.gz'
+При момощи этой штуки можно создать карту проекта
+чтобы открыть список проектов
+\C - чтобы рекурсивно добавить в проект файлы
+
+#### Bundle 'taglist.vim'
+Окно для просмотра тегов в файле
+
+#### Bundle 'indexer.tar.gz'
+Индексация тегов
+
+#### Bundle 'DBGp-Remote-Debugger-Interface'
+Отладчик для php
+DBGp (xdebug)
+запустать так http://example.com/index.php?XDEBUG_SESSION_START=1
+требует php5-xdebug
+вызов F5
+
+#### Bundle 'tomtom/checksyntax_vim'
+проверка синтаксиса php
+требует php-cli
+проверяет автоматически при попытке сохранить
+можно обучить и другим синтаксисам
+
+#### Bundle 'phpcodesniffer.vim'
+стиль кодирования
+стандарт Zend
+требуется phpcs (http://pear.php.net/package/PHP_CodeSniffer)
+TODO: есть проблемы надо победить (не отображается код после проверки)
+
+#### Bundle 'phpcomplete.vim'
+дополнение для функций и ключевых слов
+complete
+
+#### Bundle 'miripiruni/CSScomb-for-Vim.git'
+сортировка css свойств
+
+
+### Шпаргалка <a id="shortList" />
+
+#### Буферы
+
+<pre>
+:ls    	 show the buffer list
+:bn    	 open the next buffer in the current window (cycles
+from the end of the list to the beginning).
+:bp    	 open the previous buffer in the current window (cycles
+from the start of the list to the end).
+CTRL-^ 	 switch to the alternate file
+:w     	 save the changes to a file
+:e!    	 restore the original file
+:bd!   	 forcibly remove the buffer from the buffer list, discarding any changes
+:q!    	 force Vim to quit, discarding changes to all modified buffers
+</pre>
+
+#### Окна
+
+<pre>
+ctrl-w s           	 split the current window horizontally,
+loading the same file in the new window
+ctrl-w v           	 split the current window vertically,
+loading the same file in the new window
+:sp[lit] filename  	 split the current window horizontally,
+loading filename in the new window
+:vsp[lit] filename 	 split the current window vertically,
+loading filename in the new window
+:q[uit]            	 close the currently active window
+:on[ly]            	 close all windows except the currently active window
+ctrl-w w           	 cycle between the open windows
+ctrl-w h           	 focus the window to the left
+ctrl-w j           	 focus the window to the down
+ctrl-w k           	 focus the window to the up
+ctrl-w l           	 focus the window to the right
+ctrl-w +           	 increase height of current window by 1 line
+ctrl-w -           	 decrease height of current window by 1 line
+ctrl-w _           	 maximise height of current window
+ctrl-w |           	 maximise width of current window
+ctrl-w r           	 rotate all windows
+ctrl-w x           	 exchange current window with its neighbour
+ctrl-w H           	 move current window to far left
+ctrl-w J           	 move current window to bottom
+ctrl-w K           	 move current window to top
+ctrl-w L           	 move current window to far right
+</pre>
+
+#### Табы
+
+<pre>
+:tabe[dit] filename 	 Open filename in a new tab
+ctrl-W T            	 Move current split window into its own tab
+:q                  	 Close window, closing tab if
+it contains a single window
+:tabc[lose]         	 Close the current tab page and all its windows
+:tabo[nly]          	 Close all tabs apart from the current one
+gt                  	 Move to next tab
+gT                  	 Move to previous tab
+#gt                 	 Move to tab number #
+:tabmove            	 Move current tab to the end
+:tabmove 0          	 Move current tab to the beginning
+:tabmove 1          	 Move current tab to become the 2nd tab
+</pre>
+
+#### netrw (файловый менеджер)
+
+</pre>
+:e.  	 :edit .      	 at current working directory
+:sp. 	 :split .     	 in split at current working directory
+:vs. 	 :vsplit .    	 in vertical split at current working directory
+:E   	 :Explore     	 at directory of current file
+:Se  	 :Sexplore    	 in split at directory of current file
+:Ve  	 :Vexplore    	 in vertical split at directory of current file
+%    	 create a new file
+d    	 create a new directory
+R    	 rename the file/directory under the cursor
+D    	 Delete the file/directory under the cursor
+</pre>
+
+#### Поиск и замена
+
+<pre>
+q/     	 Open the commandline window with history of searches
+q:     	 Open the commandline window with history of commands
+ctrl-f 	 Switch from commandline mode to the commandline window
+</pre>
+
+#### Автодополнения
+автодополнение вызывается по ctrl-x дальше комбинация указывает где искать
+
+<pre>
+ctrl-x ctrl-n 	 в текущем файле
+ctrl-x ctrl-i 	 во всех буферах
+ctrl-x ctrl-] 	 тегах
+ctrl-x ctrl-f 	 именах файлов
+ctrl-x ctrl-o 	 omni
+ctrl-x ctrl-u 	 user
+ctrl-n        	 среди ключевых слов (т.е. практически всего)
+</pre>
+
+#### surround
+В разных режимах работает по разному
+<pre>
+Normal mode
+ds  	 delete a surrounding
+cs  	 change a surrounding
+ys  	 add a surrounding
+yS  	 add a surrounding and place the surrounded text on a new line + indent it
+yss 	 add a surrounding to the whole line
+ySs 	 add a surrounding to the whole line, place it on a new line + indent it
+ySS 	 same as ySs
+Visual mode
+s  	in visual mode, add a surrounding
+S  	in visual mode, add a surrounding but place text on new line + indent it
+Insert mode
+CTRL-s        	 in insert mode, add a surrounding
+CTRL-s CTRL-s 	 in insert mode, add a new line + surrounding + indent
+CTRL-g s      	 same as <CTRL-s>
+CTRL-g S      	 same as <CTRL-s><CTRL-s>
+</pre>
+
