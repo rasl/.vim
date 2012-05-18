@@ -20,11 +20,13 @@ set nocompatible " без обратной совместимоси с vi
 
 """ ### Установка <a id="install" />
 """
+""" <pre>
 """ <code>
 """ $ git clone https://rasl@github.com/rasl/.vim.git ~/.vim
 """ $ cd ~/.vim
 """ $ . install.sh
 """ </code>
+""" </pre>
 """
 """ Установит vundle и через него поддтянет плагины, сделает symlink'и.
 """ Если устанавливать не в ~/.vim, сделает копию предыдущих настроек
@@ -390,7 +392,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 				if !empty(matchstr(line, ":shortcutList:.*"))
 					let line=''
 					for shortkey in shortkeys
-						call add(outfile, " ".shortkey)
+						call add(outfile, "* ".shortkey)
 					endfor
 				endif
 				if empty(matchstr(line, ":shortcut:.*"))
@@ -731,7 +733,7 @@ noremap <Leader><Leader>css :CSScomb<CR>
 """
 """ #### netrw (файловый менеджер)
 """
-""" </pre>
+""" <pre>
 """ :e.  	 :edit .      	 at current working directory
 """ :sp. 	 :split .     	 in split at current working directory
 """ :vs. 	 :vsplit .    	 in vertical split at current working directory

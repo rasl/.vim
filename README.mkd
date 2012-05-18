@@ -16,46 +16,48 @@
 
 ### Установка <a id="install" />
 
+<pre>
 <code>
 $ git clone https://rasl@github.com/rasl/.vim.git ~/.vim
 $ cd ~/.vim
 $ . install.sh
 </code>
+</pre>
 
 Установит vundle и через него поддтянет плагины, сделает symlink'и.
 Если устанавливать не в ~/.vim, сделает копию предыдущих настроек
 (~/.vim.backup ~/.vimrc.backup)
 
 ### Список горячих клавиш <a id="shortcuts" />
- <code>\\\\n</code> - вкл/выкл нумерацию строк (3 режима)
- <code>\\\\e</code> - конвертация табов в пробелы и обратно
- <code>\\\\w</code> - вкл/выкл перенос строк
- <code>\\\\l</code> - показывать/не показывать непечатаемые символы (пробебы, табы и т.д.)
- <code>\\\\s</code> - вкл/выкл проверку правописания
- <code>\\\\se</code> - вкл/выкл проверку английского
- <code>\\\\sr</code> - вкл/выкл проверку русского
- <code>\\\\sre</code> - вкл/выкл проверку правописания сразу 2х
- <code>\\\\sre</code> - вкл/выкл проверку правописания сразу 2х
- <code>\\\\v</code> - открыть конфиг .vimrc в новом tab
- <code>\\\\vv</code> - применить изменения конфига .vimrc
- <code>\\\\vd</code> - сгенерировать readme.mk из комментариев в .vimrc
- <code>\\<esc></code> - убрать подсветку поиска
- <code>\\\\r</code> - поиск и замена во всех открытых буферах
- <code>\\\\m</code> - вкл/выкл меню в gvim
- <code>\\\\t5</code> - применить цветовую схему railscasts (темная)
- <code>\\\\t5</code> - применить цветовую схему wombat256 (темная)
- <code>\\\\t5</code> - применить цветовую схему autumn2 (светлая)
- <code>\\\\t5</code> - применить цветовую схему peachpuff (контрастрая)
- <code>\\\\t5</code> - применить цветовую схему neon (не контрастная)
- <code>\\\\g</code> - gundo (древовидный вид истории изменений)
- <code>\\\\t</code> - tabular : Tabularize /
- <code>\\\\tt</code> - tabular : Tabularize /\zs
- <code>\\\\b</code> - bufexporer (менеджер буферов)
- <code>\\\\p</code> - project (менеджер проектов)
- <code>\\\\t</code> - taglist (менеджер тегов)
- <code>\\\\c</code> - checksyntax php (вызов php-cli для проверки php синтаксиса)
- <code>\\\\cc</code> - phpcodesniffer (проверка стиля кодирования)
- <code>\\\\css</code> - CSScomb (сортировка css свойств)
+* <code>\\\\n</code> - вкл/выкл нумерацию строк (3 режима)
+* <code>\\\\e</code> - конвертация табов в пробелы и обратно
+* <code>\\\\w</code> - вкл/выкл перенос строк
+* <code>\\\\l</code> - показывать/не показывать непечатаемые символы (пробебы, табы и т.д.)
+* <code>\\\\s</code> - вкл/выкл проверку правописания
+* <code>\\\\se</code> - вкл/выкл проверку английского
+* <code>\\\\sr</code> - вкл/выкл проверку русского
+* <code>\\\\sre</code> - вкл/выкл проверку правописания сразу 2х
+* <code>\\\\sre</code> - вкл/выкл проверку правописания сразу 2х
+* <code>\\\\v</code> - открыть конфиг .vimrc в новом tab
+* <code>\\\\vv</code> - применить изменения конфига .vimrc
+* <code>\\\\vd</code> - сгенерировать readme.mk из комментариев в .vimrc
+* <code>\\<esc></code> - убрать подсветку поиска
+* <code>\\\\r</code> - поиск и замена во всех открытых буферах
+* <code>\\\\m</code> - вкл/выкл меню в gvim
+* <code>\\\\t5</code> - применить цветовую схему railscasts (темная)
+* <code>\\\\t5</code> - применить цветовую схему wombat256 (темная)
+* <code>\\\\t5</code> - применить цветовую схему autumn2 (светлая)
+* <code>\\\\t5</code> - применить цветовую схему peachpuff (контрастрая)
+* <code>\\\\t5</code> - применить цветовую схему neon (не контрастная)
+* <code>\\\\g</code> - gundo (древовидный вид истории изменений)
+* <code>\\\\t</code> - tabular : Tabularize /
+* <code>\\\\tt</code> - tabular : Tabularize /\zs
+* <code>\\\\b</code> - bufexporer (менеджер буферов)
+* <code>\\\\p</code> - project (менеджер проектов)
+* <code>\\\\t</code> - taglist (менеджер тегов)
+* <code>\\\\c</code> - checksyntax php (вызов php-cli для проверки php синтаксиса)
+* <code>\\\\cc</code> - phpcodesniffer (проверка стиля кодирования)
+* <code>\\\\css</code> - CSScomb (сортировка css свойств)
 
 
 
@@ -215,7 +217,7 @@ gT                  	 Move to previous tab
 
 #### netrw (файловый менеджер)
 
-</pre>
+<pre>
 :e.  	 :edit .      	 at current working directory
 :sp. 	 :split .     	 in split at current working directory
 :vs. 	 :vsplit .    	 in vertical split at current working directory
