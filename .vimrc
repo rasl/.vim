@@ -421,7 +421,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 	nnoremap <silent><leader><esc> :noh<CR>
 
 " Автоматически менять директорию текущего файла
-	autocmd BufEnter * lcd %:p:h
+	"autocmd BufEnter *.php,*.js,*.less,*.css,*.html lcd %:p:h
 
 
 " Кодировки
