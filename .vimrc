@@ -50,6 +50,7 @@ Bundle 'gmarik/vundle'
 " подключение плагинов
 "	плагины обшего назначения
 Bundle 'Color-Sampler-Pack'
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'sjl/gundo.vim'
 Bundle "godlygeek/tabular"
 Bundle 'scrooloose/nerdcommenter'
@@ -474,22 +475,30 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 """ set t_Co=256
 """
 	" темная
-""" :shortcut: <leader><leader>t5 - применить цветовую схему railscasts (темная)
-	nmap <silent><Leader><Leader>t5 :colorscheme railscasts<CR>
+""" :shortcut: <leader><leader>t7 - применить цветовую схему railscasts (темная)
+	nmap <silent><Leader><Leader>t7 :colorscheme railscasts<CR>
 	" темная
-""" :shortcut: <leader><leader>t5 - применить цветовую схему wombat256 (темная)
-	nmap <silent><Leader><Leader>t4 :colorscheme wombat256<CR>
+""" :shortcut: <leader><leader>t6 - применить цветовую схему wombat256 (темная)
+	nmap <silent><Leader><Leader>t6 :colorscheme wombat256<CR>
 	" светлая
 """ :shortcut: <leader><leader>t5 - применить цветовую схему autumn2 (светлая)
-	nmap <silent><Leader><Leader>t3 :colorscheme autumn2<CR>
+	nmap <silent><Leader><Leader>t5 :colorscheme autumn2<CR>
 	" прозрачная котрастная
-""" :shortcut: <leader><leader>t5 - применить цветовую схему peachpuff (контрастрая)
-	nmap <silent><Leader><Leader>t2 :colorscheme peachpuff<CR>
+""" :shortcut: <leader><leader>t4 - применить цветовую схему peachpuff (контрастрая)
+	nmap <silent><Leader><Leader>t4 :colorscheme peachpuff<CR>
 	" прозрачная не контрастная
-""" :shortcut: <leader><leader>t5 - применить цветовую схему neon (не контрастная)
-	nmap <silent><Leader><Leader>t1 :colorscheme neon<CR>
+""" :shortcut: <leader><leader>t3 - применить цветовую схему neon (не контрастная)
+	nmap <silent><Leader><Leader>t3 :colorscheme neon<CR>
+
+""" :shortcut: <leader><leader>t2 - применить цветовую схему solarized (темная)
+	nmap <silent><Leader><Leader>t2 :colorscheme solarized<CR> :set background=dark<CR>
+	" прозрачная не контрастная
+""" :shortcut: <leader><leader>t1 - применить цветовую схему solarized (светлая, по умолчанию)
+	nmap <silent><Leader><Leader>t1 :colorscheme solarized<CR> :set background=light <CR>
 	" set default
-	colorscheme neon
+	let g:solarized_termcolors=256
+	set background=light
+	colorscheme solarized
 
 
 
