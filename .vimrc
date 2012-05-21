@@ -468,7 +468,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 """ ### Плагины <a name="plugins" />
 """
 
-""" #### Bundle 'Color-Sampler-Pack'
+""" #### Bundle 'Color-Sampler-Pack' && Bundle 'solarized'
 """ Цветовые схемы
 """ пакет стандартных цветовых схем
 """ для работы нужны 256 цветов

@@ -44,11 +44,13 @@ $ . install.sh
 * <code>\\<esc></code> - убрать подсветку поиска
 * <code>\\\\r</code> - поиск и замена во всех открытых буферах
 * <code>\\\\m</code> - вкл/выкл меню в gvim
-* <code>\\\\t5</code> - применить цветовую схему railscasts (темная)
-* <code>\\\\t5</code> - применить цветовую схему wombat256 (темная)
+* <code>\\\\t7</code> - применить цветовую схему railscasts (темная)
+* <code>\\\\t6</code> - применить цветовую схему wombat256 (темная)
 * <code>\\\\t5</code> - применить цветовую схему autumn2 (светлая)
-* <code>\\\\t5</code> - применить цветовую схему peachpuff (контрастрая)
-* <code>\\\\t5</code> - применить цветовую схему neon (не контрастная)
+* <code>\\\\t4</code> - применить цветовую схему peachpuff (контрастрая)
+* <code>\\\\t3</code> - применить цветовую схему neon (не контрастная)
+* <code>\\\\t2</code> - применить цветовую схему solarized (темная)
+* <code>\\\\t1</code> - применить цветовую схему solarized (светлая, по умолчанию)
 * <code>\\\\g</code> - gundo (древовидный вид истории изменений)
 * <code>\\\\t</code> - tabular : Tabularize /
 * <code>\\\\tt</code> - tabular : Tabularize /\zs
@@ -70,7 +72,7 @@ $ . install.sh
 
 ### Плагины <a name="plugins" />
 
-#### Bundle 'Color-Sampler-Pack'
+#### Bundle 'Color-Sampler-Pack' && Bundle 'solarized'
 Цветовые схемы
 пакет стандартных цветовых схем
 для работы нужны 256 цветов
