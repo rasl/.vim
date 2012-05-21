@@ -361,10 +361,10 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 " работа с конфигом самого vim
 	" открыть конфиг в новом tab
 """ :shortcut: <leader><leader>v - открыть конфиг .vimrc в новом tab
-	nnoremap <silent><leader><leader>v :tabedit $MYVIMRC<CR>
+	nnoremap <silent><leader><leader>v :tabedit $HOME/.vim/.vimrc<CR>
 	" подкгузка новых изменений
 """ :shortcut: <leader><leader>vv - применить изменения конфига .vimrc
-	nnoremap <silent><leader><leader>vv :source $MYVIMRC<CR>
+	nnoremap <silent><leader><leader>vv :source $HOME/.vim/.vimrc<CR>
 	" автоподгрузка изменение (бывает сильно тупит)
 	"if has("autocmd")
 		"autocmd bufwritepost .vimrc source $MYVIMRC
@@ -373,7 +373,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 	function! MakeMarkDownFromComment()
 		let mapleader = g:mapleader
 		let shortkeys=[]
-		let file = readfile($MYVIMRC)
+		let file = readfile($HOME.'/.vim/.vimrc')
 		for line in file
 			if !empty(matchstr(line, "\"\\{3}\\s:shortcut:.*"))
 				let shortkey = substitute(line, "\"\\{3}\\s:shortcut:\\s\\(.*\\)", "\\1", "g")
@@ -383,7 +383,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 			endif
 		endfor
 		let outfile=[]
-		let file = readfile($MYVIMRC)
+		let file = readfile($HOME.'/.vim/.vimrc')
 		for line in file
 			let line = matchstr(line, "\"\\{3}.*")
 			if !empty(line)
