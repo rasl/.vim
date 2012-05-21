@@ -7,14 +7,14 @@
 * [ Плагины ](#plugins)
 * [ Шпаргалка ](#shortList)
 
-### Краткое описание <a id="intro" />
+### Краткое описание <a name="intro" />
 
 В репозитории нет самих плагинов, они подключаются через [ vudle ](https://github.com/gmarik/vundle)
 Для работы необходим git.
 Все горячие клавиши начинаются с двойного нажания <code>leader</code>.
 Эти настройки использую под debian и cygwin, т.е. в linux-like должно работать.
 
-### Установка <a id="install" />
+### Установка <a name="install" />
 
 <pre>
 <code>
@@ -28,7 +28,7 @@ $ . install.sh
 Если устанавливать не в ~/.vim, сделает копию предыдущих настроек
 (~/.vim.backup ~/.vimrc.backup)
 
-### Список горячих клавиш <a id="shortcuts" />
+### Список горячих клавиш <a name="shortcuts" />
 * <code>\\\\n</code> - вкл/выкл нумерацию строк (3 режима)
 * <code>\\\\e</code> - конвертация табов в пробелы и обратно
 * <code>\\\\w</code> - вкл/выкл перенос строк
@@ -61,14 +61,14 @@ $ . install.sh
 
 
 
-### Ёще описание <a id="desc" />
+### Ёще описание <a name="desc" />
 
 Можно передвигаться с помощью hjkl в Insert mode зажав Ctrl
 
 Стрелки и pgUp pgDown отключены
 
 
-### Плагины <a id="plugins" />
+### Плагины <a name="plugins" />
 
 #### Bundle 'Color-Sampler-Pack'
 Цветовые схемы
@@ -151,7 +151,7 @@ complete
 сортировка css свойств
 
 
-### Шпаргалка <a id="shortList" />
+### Шпаргалка <a name="shortList" />
 
 #### Буферы
 
