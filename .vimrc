@@ -9,7 +9,7 @@
 """
 set nocompatible " без обратной совместимоси с vi
 
-""" ### Краткое описание <a id="intro" />
+""" ### Краткое описание <a name="intro" />
 """
 """ В репозитории нет самих плагинов, они подключаются через [ vudle ](https://github.com/gmarik/vundle)
 """ Для работы необходим git.
@@ -18,7 +18,7 @@ set nocompatible " без обратной совместимоси с vi
 """
 
 
-""" ### Установка <a id="install" />
+""" ### Установка <a name="install" />
 """
 """ <pre>
 """ <code>
@@ -34,12 +34,12 @@ set nocompatible " без обратной совместимоси с vi
 """
 
 
-""" ### Список горячих клавиш <a id="shortcuts" />
+""" ### Список горячих клавиш <a name="shortcuts" />
 """ :shortcutList:
 """
 
 """
-""" ### Ёще описание <a id="desc" />
+""" ### Ёще описание <a name="desc" />
 """
 " Подключение и запуск vundle
 " нужен git
@@ -464,7 +464,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 
 """
-""" ### Плагины <a id="plugins" />
+""" ### Плагины <a name="plugins" />
 """
 
 """ #### Bundle 'Color-Sampler-Pack'
@@ -667,7 +667,7 @@ noremap <Leader><Leader>css :CSScomb<CR>
 
 
 """
-""" ### Шпаргалка <a id="shortList" />
+""" ### Шпаргалка <a name="shortList" />
 """
 """ #### Буферы
 """
