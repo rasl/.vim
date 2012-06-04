@@ -134,8 +134,9 @@ DBGp (xdebug)
 вызов F5
 
 #### Bundle 'tomtom/checksyntax_vim'
-проверка синтаксиса php
-требует php-cli
+проверка синтаксиса
+php требует php-cli
+ruby требует ruby
 проверяет автоматически при попытке сохранить
 можно обучить и другим синтаксисам
 
@@ -151,6 +152,12 @@ complete
 
 #### Bundle 'miripiruni/CSScomb-for-Vim.git'
 сортировка css свойств
+
+#### Bundle 'git://github.com/vim-ruby/vim-ruby.git'
+много плюшек для ruby (самой главной считаю словарь для автодоплнения)
+
+#### Bundle 'git://github.com/tpope/vim-rails.git'
+много плюшек для rails (автодополнение, создание контроллеров и т.п. из vim)
 
 
 ### Шпаргалка <a name="shortList" />

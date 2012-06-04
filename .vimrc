@@ -104,7 +104,9 @@ Bundle 'tpope/vim-fugitive'
 "	svn (и другие)
 Bundle 'vcscommand.vim'
 
-
+"	Ruby
+Bundle 'git://github.com/vim-ruby/vim-ruby.git'
+Bundle 'git://github.com/tpope/vim-rails.git'
 
 "Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'ervandew/supertab'
@@ -119,7 +121,6 @@ Bundle 'vcscommand.vim'
 " vim-scripts repos
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
-"Bundle 'rails.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 
@@ -625,13 +626,22 @@ let g:debuggerTimeout = 10
 
 
 """ #### Bundle 'tomtom/checksyntax_vim'
-""" проверка синтаксиса php
-""" требует php-cli
+""" проверка синтаксиса
+""" php требует php-cli
+""" ruby требует ruby
 """ проверяет автоматически при попытке сохранить
 """ можно обучить и другим синтаксисам
 """
 """ :shortcut: <leader><leader>c - checksyntax php (вызов php-cli для проверки php синтаксиса)
 noremap <silent><Leader><Leader>c :CheckSyntax<CR>
+" проверка
+let g:checksyntax = {}
+let g:checksyntax['ruby'] = {
+   \ 'prepare': 'compiler ruby',
+   \ 'auto': executable('ruby') == 1,
+   \ 'cmd': 'ruby -c',
+   \ 'okrx': 'Syntax OK\|No Errors'
+   \ }
 
 
 """ #### Bundle 'phpcodesniffer.vim'
@@ -672,6 +682,19 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 """ :shortcut: <leader><leader>css - CSScomb (сортировка css свойств)
 noremap <Leader><Leader>css :CSScomb<CR>
 
+
+
+"
+" Настройки плагинов для ruby
+"
+
+""" #### Bundle 'git://github.com/vim-ruby/vim-ruby.git'
+""" много плюшек для ruby (самой главной считаю словарь для автодоплнения)
+"""
+
+""" #### Bundle 'git://github.com/tpope/vim-rails.git'
+""" много плюшек для rails (автодополнение, создание контроллеров и т.п. из vim)
+"""
 
 
 
