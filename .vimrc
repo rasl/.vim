@@ -77,7 +77,7 @@ Bundle 'tomtom/checksyntax_vim'
 " дополнение для функций и ключевых слов php
 Bundle 'phpcomplete.vim'
 " стиль кодирования
-Bundle 'phpcodesniffer.vim'
+"Bundle 'phpcodesniffer.vim'
 " мануалы
 Bundle 'Yii-API-manual-for-Vim'
 
@@ -620,6 +620,12 @@ autocmd FileType php let g:indexer_ctagsCommandLineOptions="-R --exclude=.svn --
 """ требует php5-xdebug
 """ вызов F5
 """
+""" настройки самого xdebug
+""" zend_extension=/usr/lib/php5/20090626/xdebug.so
+""" xdebug.remote_enable = on ; *включить удаленную отладку (по умолчанию off)*
+""" ;xdebug.remote_port = 9000
+""" ;xdebug.remote_host = 127.0.0.1
+"""
 let g:debuggerPort = 9000
 let g:debuggerTimeout = 10
 
@@ -645,10 +651,11 @@ let g:checksyntax['ruby'] = {
 
 
 """ #### Bundle 'phpcodesniffer.vim'
-""" стиль кодирования
+""" стиль кодирования (пока отключен)
 """ стандарт Zend
 """ требуется phpcs (http://pear.php.net/package/PHP_CodeSniffer)
 """ TODO: есть проблемы надо победить (не отображается код после проверки)
+""" TODO: биндинги пересекаются с отладчиком xdebug
 """
 """ :shortcut: <leader><leader>cc - phpcodesniffer (проверка стиля кодирования)
 let g:php_check_codesniffer_cmd='phpcs --standard=Zend --report=emacs'
