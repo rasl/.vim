@@ -215,6 +215,20 @@ filetype plugin indent on	  " required special plugins
 	nnoremap <silent> <leader><leader>e :call ToggleTabsToSpaces()<CR>
 
 
+" вставка
+
+	set nopaste " режим "вставка со вклеиванием"
+	" включение/выключение
+	function! TogglePasteMod()
+		  if &paste
+			set nopaste
+		  else
+			set paste
+		  endif
+		endfunction
+""" :shortcut: <leader><leader>p - вкл/выкл ингорирования автопробелов при вставке
+	nnoremap <silent> <leader><leader>p :call TogglePasteMod()<CR>
+
 " понимать русские буквы во всех режимах (кроме command-line)
 	set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
@@ -586,8 +600,8 @@ let g:user_zen_settings = {
 """ чтобы открыть список проектов
 """ \C - чтобы рекурсивно добавить в проект файлы
 """
-""" :shortcut: <leader><leader>p - project (менеджер проектов)
-	nmap <silent><Leader><Leader>p <Plug>ToggleProject
+""" :shortcut: <leader><leader>pp - project (менеджер проектов)
+	nmap <silent><Leader><Leader>pp <Plug>ToggleProject
 
 
 
