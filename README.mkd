@@ -31,6 +31,7 @@ $ . install.sh
 ### Список горячих клавиш <a name="shortcuts" />
 * <code>\\\\n</code> - вкл/выкл нумерацию строк (3 режима)
 * <code>\\\\e</code> - конвертация табов в пробелы и обратно
+* <code>\\\\p</code> - вкл/выкл ингорирования автопробелов при вставке
 * <code>\\\\w</code> - вкл/выкл перенос строк
 * <code>\\\\l</code> - показывать/не показывать непечатаемые символы (пробебы, табы и т.д.)
 * <code>\\\\s</code> - вкл/выкл проверку правописания
@@ -55,7 +56,7 @@ $ . install.sh
 * <code>\\\\t</code> - tabular : Tabularize /
 * <code>\\\\tt</code> - tabular : Tabularize /\zs
 * <code>\\\\b</code> - bufexporer (менеджер буферов)
-* <code>\\\\p</code> - project (менеджер проектов)
+* <code>\\\\pp</code> - project (менеджер проектов)
 * <code>\\\\t</code> - taglist (менеджер тегов)
 * <code>\\\\c</code> - checksyntax php (вызов php-cli для проверки php синтаксиса)
 * <code>\\\\cc</code> - phpcodesniffer (проверка стиля кодирования)
@@ -133,6 +134,12 @@ DBGp (xdebug)
 требует php5-xdebug
 вызов F5
 
+настройки самого xdebug
+zend_extension=/usr/lib/php5/20090626/xdebug.so
+xdebug.remote_enable = on ; *включить удаленную отладку (по умолчанию off)*
+;xdebug.remote_port = 9000
+;xdebug.remote_host = 127.0.0.1
+
 #### Bundle 'tomtom/checksyntax_vim'
 проверка синтаксиса
 php требует php-cli
@@ -141,10 +148,11 @@ ruby требует ruby
 можно обучить и другим синтаксисам
 
 #### Bundle 'phpcodesniffer.vim'
-стиль кодирования
+стиль кодирования (пока отключен)
 стандарт Zend
 требуется phpcs (http://pear.php.net/package/PHP_CodeSniffer)
 TODO: есть проблемы надо победить (не отображается код после проверки)
+TODO: биндинги пересекаются с отладчиком xdebug
 
 #### Bundle 'phpcomplete.vim'
 дополнение для функций и ключевых слов
