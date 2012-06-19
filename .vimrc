@@ -125,10 +125,15 @@ Bundle 'git://github.com/tpope/vim-rails.git'
 "Bundle 'git://git.wincent.com/command-t.git'
 
 "
+" Настройки интерфейса через нативные возможности
+"
+
+
+"
 " Все мое протраснство пользовательских функций начинается с <Leader><Leader>
 " по умолчанию <Leader> равен нажатию \
 "
-	let mapleader="\\" " пусть так и остается
+	let mapleader="\\" " пусть так и остается (экранирование)
 
 "
 "	syntax
@@ -164,9 +169,19 @@ filetype plugin indent on	  " required special plugins
 	inoremap   <PageDown>   <NOP>
 	noremap    <PageDown>   <NOP>
 
-"
-" Настройки интерфейса через нативные возможности
-"
+
+
+"""
+""" Изменение размеров окон по аналогии с hjkl с зажатым CTRL
+"""
+""" :shortcut: <CTRL-j> - увеличить окно по вертикали
+""" :shortcut: <CTRL-k> - уменьшить окно по вертикали
+""" :shortcut: <CTRL-h> - уменьшить окно по горизонтали
+""" :shortcut: <CTRL-l> - увеличить окно по горизонтали
+	noremap <C-j> :resize +1<CR>
+	noremap <C-k> :resize -1<CR>
+	noremap <C-h> :vertical resize -1<CR>
+	noremap <C-l> :vertical resize +1<CR>
 
 " номера строк
 	set nonumber " не показывать номера строк
@@ -765,6 +780,11 @@ noremap <Leader><Leader>css :CSScomb<CR>
 """ ctrl-w J           	 move current window to bottom
 """ ctrl-w K           	 move current window to top
 """ ctrl-w L           	 move current window to far right
+""" свои переопределения
+""" <CTRL-j> - увеличить окно по вертикали
+""" <CTRL-k> - уменьшить окно по вертикали
+""" <CTRL-h> - уменьшить окно по горизонтали
+""" <CTRL-l> - увеличить окно по горизонтали
 """ </pre>
 """
 """ #### Табы
