@@ -501,9 +501,13 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 """ #### Bundle 'Color-Sampler-Pack' && Bundle 'solarized'
 """ Цветовые схемы
+"""
 """ пакет стандартных цветовых схем
+"""
 """ для работы нужны 256 цветов
+""" <pre>
 """ set t_Co=256
+""" </pre>
 """
 	" темная
 """ :shortcut: <leader><leader>t7 - применить цветовую схему railscasts (темная)
@@ -544,13 +548,15 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 """ #### Bundle "godlygeek/tabular"
 """ Автоматическое выравнивание
-""" настройка tabular
+"""
 """ позволяет автоматически растовлять пробелы и табы
+""" <pre>
 """ insert space, example:
-""" one	= 1
-""" two	= 2
+""" one   = 1
+""" two   = 2
 """ three = 3
-""" four	= 4
+""" four  = 4
+""" </pre>
 """
 	" выравнивать по введенному символу
 """ :shortcut: <leader><leader>t - tabular : Tabularize /
@@ -563,7 +569,9 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 """ #### Bundle 'scrooloose/nerdcommenter'
 """ Умное комментирование
+"""
 """ http://www.vim.org/scripts/script.php?script_id=1218
+"""
 """ все комбинации по умолчанию
 """
 
@@ -571,11 +579,14 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 """ #### Bundle 'slack/vim-bufexplorer'
 """ Менеджер буферов
+"""
 """ стандартые вызовы
+""" <pre>
 """  '\be' (normal open)
 """  '\bs' (force horizontal split open)
 """  '\bv' (force vertical split open)
-""" + мои по аналогии со всеми настройками через 2 Leader
+""" </pre>
+""" мои по аналогии со всеми настройками через 2 Leader
 """
 """ :shortcut: <leader><leader>b - bufexporer (менеджер буферов)
 	noremap <silent><Leader><Leader>b : BufExplorer<CR>
@@ -584,6 +595,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 """ #### Bundle 'mattn/zencoding-vim'
 """ ZenCoding
+"""
 """ Быстрый набор html
 """
 let g:user_zen_settings = {
@@ -613,8 +625,11 @@ let g:user_zen_settings = {
 
 """ #### Bundle 'project.tar.gz'
 """ При момощи этой штуки можно создать карту проекта
+"""
 """ чтобы открыть список проектов
+""" <pre>
 """ \C - чтобы рекурсивно добавить в проект файлы
+""" </pre>
 """
 """ :shortcut: <leader><leader>pp - project (менеджер проектов)
 	nmap <silent><Leader><Leader>pp <Plug>ToggleProject
@@ -645,16 +660,24 @@ autocmd FileType php let g:indexer_ctagsCommandLineOptions="-R --exclude=.svn --
 
 """ #### Bundle 'DBGp-Remote-Debugger-Interface'
 """ Отладчик для php
+"""
 """ DBGp (xdebug)
+"""
 """ запустать так http://example.com/index.php?XDEBUG_SESSION_START=1
+"""
 """ требует php5-xdebug
+"""
 """ вызов F5
 """
 """ настройки самого xdebug
+""" <pre>
+""" <code>
 """ zend_extension=/usr/lib/php5/20090626/xdebug.so
-""" xdebug.remote_enable = on ; *включить удаленную отладку (по умолчанию off)*
+""" xdebug.remote_enable = on ; включить удаленную отладку (по умолчанию off)
 """ ;xdebug.remote_port = 9000
 """ ;xdebug.remote_host = 127.0.0.1
+""" </code>
+""" </pre>
 """
 let g:debuggerPort = 9000
 let g:debuggerTimeout = 10
@@ -663,9 +686,13 @@ let g:debuggerTimeout = 10
 
 """ #### Bundle 'tomtom/checksyntax_vim'
 """ проверка синтаксиса
+"""
 """ php требует php-cli
+"""
 """ ruby требует ruby
+"""
 """ проверяет автоматически при попытке сохранить
+"""
 """ можно обучить и другим синтаксисам
 """
 """ :shortcut: <leader><leader>c - checksyntax php (вызов php-cli для проверки php синтаксиса)
@@ -682,9 +709,13 @@ let g:checksyntax['ruby'] = {
 
 """ #### Bundle 'phpcodesniffer.vim'
 """ стиль кодирования (пока отключен)
+"""
 """ стандарт Zend
+"""
 """ требуется phpcs (http://pear.php.net/package/PHP_CodeSniffer)
+"""
 """ TODO: есть проблемы надо победить (не отображается код после проверки)
+"""
 """ TODO: биндинги пересекаются с отладчиком xdebug
 """
 """ :shortcut: <leader><leader>cc - phpcodesniffer (проверка стиля кодирования)
@@ -695,7 +726,6 @@ noremap <silent><Leader><Leader>cc :call PhpCodeSniffer()<CR>
 
 """ #### Bundle 'phpcomplete.vim'
 """ дополнение для функций и ключевых слов
-""" complete
 """
 "set ofu=syntaxcomplete#Complete
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP

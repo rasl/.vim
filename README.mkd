@@ -82,9 +82,13 @@ $ . install.sh
 
 #### Bundle 'Color-Sampler-Pack' && Bundle 'solarized'
 Цветовые схемы
+
 пакет стандартных цветовых схем
+
 для работы нужны 256 цветов
+<pre>
 set t_Co=256
+</pre>
 
 #### Bundle 'sjl/gundo.vim'
 Древовидный вид истории изменений
@@ -92,29 +96,37 @@ set t_Co=256
 
 #### Bundle "godlygeek/tabular"
 Автоматическое выравнивание
-настройка tabular
+
 позволяет автоматически растовлять пробелы и табы
+<pre>
 insert space, example:
-one	= 1
-two	= 2
+one   = 1
+two   = 2
 three = 3
-four	= 4
+four  = 4
+</pre>
 
 #### Bundle 'scrooloose/nerdcommenter'
 Умное комментирование
+
 http://www.vim.org/scripts/script.php?script_id=1218
+
 все комбинации по умолчанию
 
 #### Bundle 'slack/vim-bufexplorer'
 Менеджер буферов
+
 стандартые вызовы
+<pre>
 '\be' (normal open)
 '\bs' (force horizontal split open)
 '\bv' (force vertical split open)
-+ мои по аналогии со всеми настройками через 2 Leader
+</pre>
+мои по аналогии со всеми настройками через 2 Leader
 
 #### Bundle 'mattn/zencoding-vim'
 ZenCoding
+
 Быстрый набор html
 
 #### Bundle 'tpope/vim-surround'
@@ -125,8 +137,11 @@ ZenCoding
 
 #### Bundle 'project.tar.gz'
 При момощи этой штуки можно создать карту проекта
+
 чтобы открыть список проектов
+<pre>
 \C - чтобы рекурсивно добавить в проект файлы
+</pre>
 
 #### Bundle 'taglist.vim'
 Окно для просмотра тегов в файле
@@ -136,34 +151,49 @@ ZenCoding
 
 #### Bundle 'DBGp-Remote-Debugger-Interface'
 Отладчик для php
+
 DBGp (xdebug)
+
 запустать так http://example.com/index.php?XDEBUG_SESSION_START=1
+
 требует php5-xdebug
+
 вызов F5
 
 настройки самого xdebug
+<pre>
+<code>
 zend_extension=/usr/lib/php5/20090626/xdebug.so
-xdebug.remote_enable = on ; *включить удаленную отладку (по умолчанию off)*
+xdebug.remote_enable = on ; включить удаленную отладку (по умолчанию off)
 ;xdebug.remote_port = 9000
 ;xdebug.remote_host = 127.0.0.1
+</code>
+</pre>
 
 #### Bundle 'tomtom/checksyntax_vim'
 проверка синтаксиса
+
 php требует php-cli
+
 ruby требует ruby
+
 проверяет автоматически при попытке сохранить
+
 можно обучить и другим синтаксисам
 
 #### Bundle 'phpcodesniffer.vim'
 стиль кодирования (пока отключен)
+
 стандарт Zend
+
 требуется phpcs (http://pear.php.net/package/PHP_CodeSniffer)
+
 TODO: есть проблемы надо победить (не отображается код после проверки)
+
 TODO: биндинги пересекаются с отладчиком xdebug
 
 #### Bundle 'phpcomplete.vim'
 дополнение для функций и ключевых слов
-complete
 
 #### Bundle 'miripiruni/CSScomb-for-Vim.git'
 сортировка css свойств
