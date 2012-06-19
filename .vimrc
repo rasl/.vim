@@ -174,10 +174,10 @@ filetype plugin indent on	  " required special plugins
 """
 """ Изменение размеров окон по аналогии с hjkl с зажатым CTRL
 """
-""" :shortcut: <CTRL-j> - увеличить окно по вертикали
-""" :shortcut: <CTRL-k> - уменьшить окно по вертикали
-""" :shortcut: <CTRL-h> - уменьшить окно по горизонтали
-""" :shortcut: <CTRL-l> - увеличить окно по горизонтали
+""" :shortcut: CTRL-j - увеличить окно по вертикали
+""" :shortcut: CTRL-k - уменьшить окно по вертикали
+""" :shortcut: CTRL-h - уменьшить окно по горизонтали
+""" :shortcut: CTRL-l - увеличить окно по горизонтали
 	noremap <C-j> :resize +1<CR>
 	noremap <C-k> :resize -1<CR>
 	noremap <C-h> :vertical resize -1<CR>
@@ -409,6 +409,7 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 			if !empty(matchstr(line, "\"\\{3}\\s:shortcut:.*"))
 				let shortkey = substitute(line, "\"\\{3}\\s:shortcut:\\s\\(.*\\)", "\\1", "g")
 				let shortkey = substitute(shortkey, "\\(\\(<leader>\\)\\+[^ ]\\+\\)", "<code>\\1</code>", "g")
+				let shortkey = substitute(shortkey, "\\(\\(CTRL\\)\\+[^ ]\\+\\)", "<code>\\1</code>", "g")
 				let shortkey = substitute(shortkey, "<leader>", substitute(mapleader, "\\", '\\\\\\\\', "g"), "g")
 				call add(shortkeys, shortkey)
 			endif

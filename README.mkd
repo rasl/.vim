@@ -29,6 +29,10 @@ $ . install.sh
 (~/.vim.backup ~/.vimrc.backup)
 
 ### Список горячих клавиш <a name="shortcuts" />
+* <code>CTRL-j</code> - увеличить окно по вертикали
+* <code>CTRL-k</code> - уменьшить окно по вертикали
+* <code>CTRL-h</code> - уменьшить окно по горизонтали
+* <code>CTRL-l</code> - увеличить окно по горизонтали
 * <code>\\\\n</code> - вкл/выкл нумерацию строк (3 режима)
 * <code>\\\\e</code> - конвертация табов в пробелы и обратно
 * <code>\\\\p</code> - вкл/выкл ингорирования автопробелов при вставке
@@ -69,6 +73,9 @@ $ . install.sh
 Можно передвигаться с помощью hjkl в Insert mode зажав Ctrl
 
 Стрелки и pgUp pgDown отключены
+
+
+Изменение размеров окон по аналогии с hjkl с зажатым CTRL
 
 
 ### Плагины <a name="plugins" />
@@ -213,6 +220,11 @@ ctrl-w H           	 move current window to far left
 ctrl-w J           	 move current window to bottom
 ctrl-w K           	 move current window to top
 ctrl-w L           	 move current window to far right
+свои переопределения
+<CTRL-j> - увеличить окно по вертикали
+<CTRL-k> - уменьшить окно по вертикали
+<CTRL-h> - уменьшить окно по горизонтали
+<CTRL-l> - увеличить окно по горизонтали
 </pre>
 
 #### Табы
