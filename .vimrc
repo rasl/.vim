@@ -66,6 +66,9 @@ Bundle 'indexer.tar.gz'
 Bundle 'DfrankUtil'
 Bundle 'vimprj'
 
+" Быстрый поиск
+Bundle 'mileszs/ack.vim'
+
 "	php
 " корректное отображение php синтаксиса
 Bundle 'PHP-correct-Indenting'
@@ -567,16 +570,6 @@ set statusline+=\ \ %2.3p%% " percentage through file in lines
 
 
 
-""" #### Bundle 'scrooloose/nerdcommenter'
-""" Умное комментирование
-"""
-""" http://www.vim.org/scripts/script.php?script_id=1218
-"""
-""" все комбинации по умолчанию
-"""
-
-
-
 """ #### Bundle 'slack/vim-bufexplorer'
 """ Менеджер буферов
 """
@@ -618,7 +611,7 @@ let g:user_zen_settings = {
 """ #### Bundle 'DeleteTrailingWhitespace'
 """ Удаление пробелов в конце строк всегда для всех файлов
 """
-	let g:DeleteTrailingWhitespace = 1
+	let g:DeleteTrailingWhitespace = 0
 
 
 
@@ -653,9 +646,17 @@ let g:indexer_disableCtagsWarning=1
 autocmd FileType php let g:indexer_ctagsCommandLineOptions="-R --exclude=.svn --tag-relative=yes --PHP-kinds=+cfi-v --languages=php"
 
 
+
+
+""" #### Bundle 'mileszs/ack.vim'
+""" Быстрый поиск
+"""
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 "
 " Настройки плагинов для php
 "
+
+
 
 
 """ #### Bundle 'DBGp-Remote-Debugger-Interface'

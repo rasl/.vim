@@ -106,13 +106,6 @@ three = 3
 four  = 4
 </pre>
 
-#### Bundle 'scrooloose/nerdcommenter'
-Умное комментирование
-
-http://www.vim.org/scripts/script.php?script_id=1218
-
-все комбинации по умолчанию
-
 #### Bundle 'slack/vim-bufexplorer'
 Менеджер буферов
 
@@ -148,6 +141,9 @@ ZenCoding
 
 #### Bundle 'indexer.tar.gz'
 Индексация тегов
+
+#### Bundle 'mileszs/ack.vim'
+Быстрый поиск
 
 #### Bundle 'DBGp-Remote-Debugger-Interface'
 Отладчик для php
