@@ -74,7 +74,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'PHP-correct-Indenting'
 " этот ещё корректнее (подсвечивает разными цветами уровни вложенности)
 Bundle 'php.vim--Hodge'
-Bundle 'DBGp-Remote-Debugger-Interface'
+Bundle 'joonty/vdebug'
 " проверка синтаксиса php
 Bundle 'tomtom/checksyntax_vim'
 " дополнение для функций и ключевых слов php
@@ -658,18 +658,13 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
 
-
-""" #### Bundle 'DBGp-Remote-Debugger-Interface'
-""" Отладчик для php
+""" #### Bundle 'joonty/vdebug'
+""" Отладчик для dbgp
+""" заявляется работа с php, ruby, python, nodejs, perl
 """
-""" DBGp (xdebug)
+""" Vdebug (xdebug)
 """
-""" запустать так http://example.com/index.php?XDEBUG_SESSION_START=1
-"""
-""" требует php5-xdebug
-"""
-""" вызов F5
-"""
+""" связка php + xdebug + vdebug отлично работает (самое главное есть мапинг файлов)
 """ настройки самого xdebug
 """ <pre>
 """ <code>
@@ -680,9 +675,58 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 """ </code>
 """ </pre>
 """
-let g:debuggerPort = 9000
-let g:debuggerTimeout = 10
+""" настройка vdebug
+""" <pre>
+""" <code>
+""" let g:vdebug_options= {
+""" \    "port" : 9000,
+""" \    "server" : 'localhost',
+""" \    "timeout" : 20,
+""" \    "on_close" : 'detach',
+""" \    "break_on_open" : 1,
+""" \    "ide_key" : '',
+""" \    "path_maps" : {},
+""" \    "debug_window_level" : 0,
+""" \    "debug_file_level" : 0,
+""" \    "debug_file" : "",
+""" \    "watch_window_style" : 'expanded',
+""" \    "marker_default" : '⬦',
+""" \    "marker_closed_tree" : '▸',
+""" \    "marker_open_tree" : '▾'
+""" \}
+""" let g:vdebug_keymap = {
+""" \    "run" : "<F5>",
+""" \    "run_to_cursor" : "<F1>",
+""" \    "step_over" : "<F2>",
+""" \    "step_into" : "<F3>",
+""" \    "step_out" : "<F4>",
+""" \    "close" : "<F6>",
+""" \    "detach" : "<F7>",
+""" \    "set_breakpoint" : "<F10>",
+""" \    "get_context" : "<F11>",
+""" \    "eval_under_cursor" : "<F12>",
+""" \    "eval_visual" : "<Leader>e",
+""" \}
+""" </code>
+""" </pre>
 
+let g:vdebug_options= {
+\    "port" : 9000,
+\    "server" : 'localhost',
+\    "timeout" : 10,
+\    "on_close" : 'detach',
+\    "break_on_open" : 1,
+\    "ide_key" : 'rd',
+\    "path_maps" : {
+\    },
+\    "debug_window_level" : 0,
+\    "debug_file_level" : 2,
+\    "debug_file" : "/tmp/xdebug",
+\    "watch_window_style" : 'expanded',
+\    "marker_default" : '⬦',
+\    "marker_closed_tree" : '▸',
+\    "marker_open_tree" : '▾'
+\}
 
 
 """ #### Bundle 'tomtom/checksyntax_vim'

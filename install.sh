@@ -12,17 +12,5 @@ else
 	mv $HOME/.vim $HOME/.vim.backup
 	ln -s $PWD $HOME/.vim
 fi
-##
-# for DBGp-Remote-Debugger-Interface
-# (hard code in file debugger.vim, search debugger.py)
-##
-if [ ! -d "$PWD/plugin" ]
-then
-	mkdir -p $PWD/plugin
-fi
-if [ ! -s $PWD/plugin/debugger.py ]
-then	
-	ln -s ../bundle/DBGp-Remote-Debugger-Interface/plugin/debugger.py $PWD/plugin/debugger.py
-fi
 vim +BundleInstall +qa!
 
