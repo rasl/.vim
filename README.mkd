@@ -29,6 +29,7 @@ $ . install.sh
 (~/.vim.backup ~/.vimrc.backup)
 
 ### Список горячих клавиш <a name="shortcuts" />
+* <code>CTRL-wt</code> - открыть нувую пустую вкладку
 * <code>CTRL-j</code> - увеличить окно по вертикали
 * <code>CTRL-k</code> - уменьшить окно по вертикали
 * <code>CTRL-h</code> - уменьшить окно по горизонтали

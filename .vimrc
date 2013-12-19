@@ -173,6 +173,8 @@ filetype plugin indent on	  " required special plugins
 	noremap    <PageDown>   <NOP>
 
 
+""" :shortcut: CTRL-wt - открыть нувую пустую вкладку
+	nnoremap <silent> <C-w>t :tabedit<CR>
 
 """
 """ Изменение размеров окон по аналогии с hjkl с зажатым CTRL
