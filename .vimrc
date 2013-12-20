@@ -274,10 +274,10 @@ filetype plugin indent on	  " required special plugins
 
 
 " ширина текста
-	set textwidth=80
-	" если можно подсвечивать 80ый столбец
+	set textwidth=120
+	" если можно подсвечивать 120ый столбец
 	if version >= 703
-		set colorcolumn=80 " подсвечиваем 80 столбец
+		set colorcolumn=120 " подсвечиваем 120 столбец
 	end
 
 
