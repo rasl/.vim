@@ -217,7 +217,7 @@ filetype plugin indent on	  " required special plugins
 " отступы и пробелы
 	set autoindent				" Копирует отступ от предыдущей строки
 	set smartindent				" Включаем 'умную' автоматическую расстановку отступов
-	set noexpandtab				" Не заменять табы на пробелы !!!!
+	set expandtab				" Не заменять табы на пробелы !!!!
 	set shiftwidth=4			" Размер сдвига при нажатии на клавиши << и >>
 	set tabstop=4				" Размер табуляции
 	set softtabstop=4
