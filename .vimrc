@@ -212,7 +212,7 @@ filetype plugin indent on	  " required special plugins
 
 
 " мышь
-	set mouse=a " пытаться поддерживать мышь
+	"set mouse=a " пытаться поддерживать мышь
 
 " отступы и пробелы
 	set autoindent				" Копирует отступ от предыдущей строки
